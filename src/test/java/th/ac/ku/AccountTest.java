@@ -10,7 +10,9 @@ public class AccountTest {
     @Test
     void account_is_valid_and_can_deposit() {
         Agent agent = new Agent();
-        BankAccount account = new BankAccount(1, "Tester", false);
+        String accountId = "123456789";
+        agent.addBankAccount(new BankAccount(accountId, "Tester", false));
+        BankAccount account = agent.getBankAccount(accountId);
 
         boolean actualResult = agent.canDeposit(account);
         assertTrue(actualResult);
@@ -19,7 +21,9 @@ public class AccountTest {
     @Test
     void account_is_invalid_and_cannot_deposit() {
         Agent agent = new Agent();
-        BankAccount account = new BankAccount(1, "Tester", true);
+        String accountId = "123456789";
+        agent.addBankAccount(new BankAccount(accountId, "Tester", true));
+        BankAccount account = agent.getBankAccount(accountId);
 
         boolean actualResult = agent.canDeposit(account);
         assertFalse(actualResult);
