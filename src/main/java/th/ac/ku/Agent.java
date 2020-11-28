@@ -13,15 +13,15 @@ public class Agent {
         bankAccounts.add(bankAccount);
     }
 
-    public boolean checkDepositPerTransaction(float depositCash) {
+    public boolean checkDepositCashPerTransaction(float depositCash) {
         return depositCash <= allowedDepositCash;
     }
 
-    public boolean checkDepositPerDay(float dailyDepositCash) {
-        return this.checkDepositPerDay(dailyDepositCash, dailyLimitCash);
+    public boolean checkDepositCashPerDay(float dailyDepositCash) {
+        return this.checkDepositCashPerDay(dailyDepositCash, dailyLimitCash);
     }
 
-    public boolean checkDepositPerDay(float dailyDepositCash, float limit) {
+    public boolean checkDepositCashPerDay(float dailyDepositCash, float limit) {
         return dailyDepositCash <= limit;
     }
 

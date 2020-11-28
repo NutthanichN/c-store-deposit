@@ -12,7 +12,7 @@ public class DailyDepositCashTest {
         float depositCash = 15000.00f;
         Agent agent = new Agent();
 
-        boolean actualResult = agent.checkDepositPerDay(depositCash);
+        boolean actualResult = agent.checkDepositCashPerDay(depositCash);
         assertTrue(actualResult);
     }
 
@@ -21,7 +21,7 @@ public class DailyDepositCashTest {
         float depositCash = 50000.00f;
         Agent agent = new Agent();
 
-        boolean actualResult = agent.checkDepositPerDay(depositCash);
+        boolean actualResult = agent.checkDepositCashPerDay(depositCash);
         assertTrue(actualResult);
     }
 
@@ -30,7 +30,7 @@ public class DailyDepositCashTest {
         float dailyDepositCash = 55000.00f;
         Agent agent = new Agent();
 
-        boolean actualResult = agent.checkDepositPerDay(dailyDepositCash);
+        boolean actualResult = agent.checkDepositCashPerDay(dailyDepositCash);
         assertFalse(actualResult);
     }
 }
