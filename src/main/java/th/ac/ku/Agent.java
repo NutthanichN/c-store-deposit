@@ -17,4 +17,8 @@ public class Agent {
         return dailyDepositCash <= limit;
     }
 
+    public boolean canDeposit(BankAccount account) {
+        return !account.getSuspendedStatus();
+    }
+
 }
