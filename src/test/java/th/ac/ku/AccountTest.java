@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class AccountTest {
 
     @Test
-    void account_is_valid_and_can_deposit() {
+    void account_is_not_suspended_and_can_deposit() {
         Agent agent = new Agent();
         String accountId = "123456789";
         agent.addBankAccount(new BankAccount(accountId, "Tester", false));
@@ -19,7 +19,7 @@ public class AccountTest {
     }
 
     @Test
-    void account_is_invalid_and_cannot_deposit() {
+    void account_is_suspended_and_cannot_deposit() {
         Agent agent = new Agent();
         String accountId = "123456789";
         agent.addBankAccount(new BankAccount(accountId, "Tester", true));
